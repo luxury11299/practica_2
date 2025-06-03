@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/tienda-1.jar tienda.jar
+COPY --from=build /target/practica2-1.jar practica2.jar
 EXPOSE 80
-ENTRYPOINT ["java","-jar","tienda.jar"]
+ENTRYPOINT ["java","-jar","practica2.jar"]
